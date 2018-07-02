@@ -10,7 +10,7 @@ title: Linux shell常用命令
 ## 1.求两个文件的交集和差集
 
 ### comm命令
->comm命令可以用于两个文件之间的比较，它有一些选项可以用来调整输出，以便执行交集、求差、以及差集操作。要注意两个文件必须是*排序和唯一(sorted and unique)的*，默认输出为三列，第一列为是A-B，第二列B-A，第三列为A交B。
+​        comm命令可以用于两个文件之间的比较，它有一些选项可以用来调整输出，以便执行交集、求差、以及差集操作。要注意两个文件必须是*排序和唯一(sorted and unique)的*，默认输出为三列，第一列为是A-B，第二列B-A，第三列为A交B。
 
 - 交集：打印出两个文件所共有的行。
 - 求差：打印出指定文件所包含的且不相同的行。
@@ -18,7 +18,9 @@ title: Linux shell常用命令
 
 命令
 
-> comm [参数选项]  文件名1 文件名2
+```
+comm [参数选项]  文件名1 文件名2
+```
 
 选项
 
@@ -141,9 +143,10 @@ awk操作为对输出做处理~
 
 命令
 
->grep -F -f file1 file2
->
->功能描述：将file2中存在file1的行输出———>2个文件的交集。但需要注意的是，如果是求交集，需要uniq下。
+```
+grep -F -f file1 file2
+功能描述：将file2中存在file1的行输出———>2个文件的交集。但需要注意的是，如果是求交集，需要uniq下。
+```
 
 示例
 
@@ -179,9 +182,10 @@ localhost:test tammy$ grep -F -f a.txt b.txt | sort | uniq
 
 命令
 
-> grep -F -v -f file1 file2
->
-> 说明：grep的-v 是取反的意思，如上意思为：输出file2中不包含file1的行  ———>file2的差集
+```
+grep -F -v -f file1 file2
+说明：grep的-v 是取反的意思，如上意思为：输出file2中不包含file1的行  ———>file2的差集
+```
 
 示例
 
@@ -197,6 +201,8 @@ localhost:test tammy$ grep -F -v -f b.txt a.txt
 ```
 
 
+
+---
 
 
 
